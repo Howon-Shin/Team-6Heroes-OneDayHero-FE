@@ -8,6 +8,11 @@ const gugi = Gugi({
 });
 
 const LoginPage = () => {
+  const loginLinkHref =
+    process.env.NEXT_PUBLIC_API_MOCKING === "enabled"
+      ? `/oauth/callback/kakao?code=test`
+      : `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.KAKAO_CLIENT_ID}&redirect_uri=${process.env.AUTH_URL}&response_type=code`;
+
   return (
     <div>
       <Image
@@ -21,8 +26,7 @@ const LoginPage = () => {
         <h1 className={`${gugi.className} text-[3.4rem] font-black`}>
           원데이 히어로
         </h1>
-        <Link
-          href={`https://kauth.kakao.com/oauth/authorize?client_id=${process.env.KAKAO_CLIENT_ID}&redirect_uri=${process.env.AUTH_URL}&response_type=code`}>
+        <Link href={loginLinkHref}>
           <Image
             src="/images/kakaoLogin 1.png"
             alt="카카오 로그인"
