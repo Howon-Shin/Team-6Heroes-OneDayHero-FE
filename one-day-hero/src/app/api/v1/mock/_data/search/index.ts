@@ -1,6 +1,9 @@
-import { MissionSearchListResponse } from "@/types/response";
+import {
+  HeroNicknameSearchResponse,
+  MissionSearchListResponse
+} from "@/types/response";
 
-export const MissionSearchList: MissionSearchListResponse = {
+export const missionSearchList: MissionSearchListResponse = {
   status: 200,
   data: {
     content: [
@@ -31,7 +34,7 @@ export const MissionSearchList: MissionSearchListResponse = {
         },
         bookmarkCount: 0,
         missionStatus: "MATCHING",
-        paths: ["path://1", "path://2"],
+        paths: ["/images/히어로 1.png", "/images/히어로 1.png"],
         isBookmarked: true
       },
       {
@@ -61,8 +64,72 @@ export const MissionSearchList: MissionSearchListResponse = {
         },
         bookmarkCount: 0,
         missionStatus: "MATCHING",
-        paths: ["path://3", "path://4"],
+        paths: ["/images/히어로 1.png", "/images/히어로 1.png"],
         isBookmarked: true
+      }
+    ],
+    pageable: {
+      pageNumber: 0,
+      pageSize: 4,
+      sort: {
+        empty: true,
+        sorted: false,
+        unsorted: true
+      },
+      offset: 0,
+      paged: true,
+      unpaged: false
+    },
+    size: 4,
+    number: 0,
+    sort: {
+      empty: true,
+      sorted: false,
+      unsorted: true
+    },
+    first: true,
+    last: true,
+    numberOfElements: 2,
+    empty: false
+  },
+  serverDateTime: "2023-11-29T13:44:34"
+};
+
+export const heroSearchList: HeroNicknameSearchResponse = {
+  status: 200,
+  data: {
+    content: [
+      {
+        id: 1,
+        nickname: "토끼",
+        image: {
+          originalName: "fef.jpg",
+          uniqueName: "r23r.jpg",
+          path: "/images/히어로 1.png"
+        },
+        favoriteMissionCategories: [
+          {
+            code: "fe",
+            name: "서빙"
+          }
+        ],
+        heroScore: 30
+      },
+      {
+        id: 2,
+        nickname: "토끼",
+        image: {
+          originalName: "fef.jpg",
+          uniqueName: "r23r.jpg",
+          path: "/images/히어로 1.png"
+        },
+        favoriteMissionCategories: [
+          {
+            code: "fe",
+            name: "서빙"
+          }
+        ],
+        heroScore: 30
       }
     ],
     pageable: {

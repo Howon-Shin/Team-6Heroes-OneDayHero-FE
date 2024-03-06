@@ -1,4 +1,4 @@
-import { ChatRoomsResponse } from "@/types/response";
+import { ChatRecordResponse, ChatRoomsResponse } from "@/types/response";
 
 export const chattingList: ChatRoomsResponse = {
   status: 200,
@@ -29,4 +29,41 @@ export const chattingList: ChatRoomsResponse = {
     }
   ],
   serverDateTime: "2023-11-24T13:30:48"
+};
+
+export const chattingRecord: ChatRecordResponse = {
+  status: 200,
+  data: [
+    {
+      message: "메세지",
+      senderId: 1,
+      senderNickName: "토끼",
+      sentMessageTime: "2023-11-12T12:00:00"
+    },
+    {
+      message: "메세지2",
+      senderId: 2,
+      senderNickName: "토끼2",
+      sentMessageTime: "2023-11-12T12:00:00"
+    },
+    {
+      message: "메세지",
+      senderId: 1,
+      senderNickName: "토끼",
+      sentMessageTime: "2023-11-12T12:00:00"
+    },
+    {
+      message: "메세지2",
+      senderId: 2,
+      senderNickName: "토끼2",
+      sentMessageTime: "2023-11-12T12:00:00"
+    },
+    {
+      message: "메세지2",
+      senderId: 2,
+      senderNickName: "토끼2",
+      sentMessageTime: "2023-11-12T12:00:00"
+    }
+  ],
+  serverDateTime: "2023-11-12T12:00:00"
 };

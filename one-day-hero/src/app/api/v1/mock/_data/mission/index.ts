@@ -1,4 +1,6 @@
 import {
+  HomeResponse,
+  MapResponse,
   MissionResponse,
   ProgressMissionListResponse,
   ProposalResponse,
@@ -38,11 +40,11 @@ export const missionDetail: MissionResponse = {
     missionImage: [
       {
         id: 1,
-        path: "s3://path1"
+        path: "/images/히어로 1.png"
       },
       {
         id: 2,
-        path: "s3://path2"
+        path: "/images/히어로 1.png"
       }
     ],
     isBookmarked: true
@@ -68,7 +70,7 @@ export const progessMissionList: ProgressMissionListResponse = {
         dong: "역삼1동",
         bookmarkCount: 1,
         missionStatus: "MATCHING",
-        imagePath: "s3://path",
+        imagePath: "/images/히어로 1.png",
         isBookmarked: true
       }
     ],
@@ -128,7 +130,7 @@ export const suggestedMissionList: SuggestedMissionListResponse = {
             endTime: "18:00",
             price: 30000
           },
-          imagePath: "s3://image"
+          imagePath: "/images/히어로 1.png"
         }
       },
       {
@@ -156,7 +158,7 @@ export const suggestedMissionList: SuggestedMissionListResponse = {
             endTime: "18:00",
             price: 30000
           },
-          imagePath: "s3://image"
+          imagePath: "/images/히어로 1.png"
         }
       },
       {
@@ -184,7 +186,7 @@ export const suggestedMissionList: SuggestedMissionListResponse = {
             endTime: "18:00",
             price: 30000
           },
-          imagePath: "s3://image"
+          imagePath: "/images/히어로 1.png"
         }
       },
       {
@@ -212,7 +214,7 @@ export const suggestedMissionList: SuggestedMissionListResponse = {
             endTime: "18:00",
             price: 30000
           },
-          imagePath: "s3://image"
+          imagePath: "/images/히어로 1.png"
         }
       },
       {
@@ -240,7 +242,7 @@ export const suggestedMissionList: SuggestedMissionListResponse = {
             endTime: "18:00",
             price: 30000
           },
-          imagePath: "s3://image"
+          imagePath: "/images/히어로 1.png"
         }
       }
     ],
@@ -289,7 +291,7 @@ export const completedMissionList: ProgressMissionListResponse = {
         dong: "역삼1동",
         bookmarkCount: 1,
         missionStatus: "MATCHING",
-        imagePath: "s3://path",
+        imagePath: "",
         isBookmarked: true
       }
     ],
@@ -345,7 +347,7 @@ export const matchingMissionList: SuggestingMissionListResponse = {
         price: 20000,
         bookmarkCount: 1,
         missionStatus: "MATCHING",
-        imagePath: "s3://path",
+        imagePath: "",
         isBookmarked: true
       },
       {
@@ -369,7 +371,7 @@ export const matchingMissionList: SuggestingMissionListResponse = {
         price: 20000,
         bookmarkCount: 1,
         missionStatus: "MATCHING",
-        imagePath: "s3://path",
+        imagePath: "",
         isBookmarked: true
       }
     ]
@@ -386,4 +388,147 @@ export const proposalDetail: ProposalResponse = {
     missionProposalStatus: "PROPOSAL"
   },
   serverDateTime: "2023-11-16T16:08:24"
+};
+
+export const homeMissionList: HomeResponse = {
+  status: 200,
+  data: {
+    missionCategories: [
+      {
+        id: 1,
+        code: "MC_001",
+        name: "서빙"
+      },
+      {
+        id: 2,
+        code: "MC_001",
+        name: "서빙"
+      }
+    ],
+    soonExpiredMissions: [
+      {
+        id: 2,
+        title: "제목",
+        missionCategory: {
+          id: 1,
+          code: "MC_001",
+          name: "서빙"
+        },
+        region: {
+          id: 1,
+          si: "서울시",
+          gu: "강남구",
+          dong: "역삼동"
+        },
+        missionDate: "2023-11-06",
+        startTime: "12:00",
+        endTime: "18:00",
+        price: 20000,
+        bookmarkCount: 1,
+        missionStatus: "MATCHING",
+        imagePath: "",
+        isBookmarked: true
+      },
+      {
+        id: 3,
+        title: "제목",
+        missionCategory: {
+          id: 3,
+          code: "MC_001",
+          name: "서빙"
+        },
+        region: {
+          id: 4,
+          si: "서울시",
+          gu: "강남구",
+          dong: "역삼동"
+        },
+        missionDate: "2023-11-06",
+        startTime: "12:00",
+        endTime: "18:00",
+        price: 20000,
+        bookmarkCount: 1,
+        missionStatus: "MATCHING",
+        imagePath: "",
+        isBookmarked: true
+      }
+    ]
+  },
+  serverDateTime: "2023-11-16T16:08:24"
+};
+
+export const aroundMissionList: MapResponse = {
+  status: 200,
+  data: {
+    content: [
+      {
+        id: 1,
+        title: "제목",
+        missionCategory: {
+          id: 1,
+          code: "MC_001",
+          name: "서빙"
+        },
+        region: {
+          id: 1,
+          si: "서울시",
+          gu: "강남구",
+          dong: "역삼동"
+        },
+        longitude: 11,
+        latitude: 22,
+        missionDate: "2023-11-06",
+        startTime: "12:00",
+        endTime: "18:00",
+        price: 20000,
+        imagePath: ""
+      },
+      {
+        id: 2,
+        title: "제목",
+        missionCategory: {
+          id: 1,
+          code: "MC_001",
+          name: "서빙"
+        },
+        region: {
+          id: 1,
+          si: "서울시",
+          gu: "강남구",
+          dong: "역삼동"
+        },
+        longitude: 11,
+        latitude: 22,
+        missionDate: "2023-11-06",
+        startTime: "12:00",
+        endTime: "18:00",
+        price: 20000,
+        imagePath: ""
+      }
+    ],
+    pageable: {
+      pageNumber: 0,
+      pageSize: 4,
+      sort: {
+        empty: true,
+        sorted: false,
+        unsorted: true
+      },
+      offset: 0,
+      paged: true,
+      unpaged: false
+    },
+    size: 4,
+    number: 0,
+    sort: {
+      empty: true,
+      sorted: false,
+      unsorted: true
+    },
+    first: true,
+    last: true,
+    numberOfElements: 1,
+    empty: false
+  },
+  serverDateTime: "2023-11-26T20:05:40"
 };

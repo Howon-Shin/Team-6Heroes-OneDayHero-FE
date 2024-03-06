@@ -2,14 +2,9 @@ import { type NextRequest, NextResponse } from "next/server";
 
 import { ProgressMissionListResponse } from "@/types/response";
 
-import { completedMissionList } from "../../../_data/mission";
+import { completedMissionList } from "../../_data/mission";
 
-export function GET(
-  request: NextRequest,
-  { params }: { params: { slug: string } }
-) {
-  const userId = params.slug;
-
+export function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const page = parseInt(searchParams.get("page") || "0");
   const size = parseInt(searchParams.get("size") || "0");

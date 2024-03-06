@@ -13,7 +13,7 @@ export const userDetail: UserResponse = {
       id: 1,
       originalName: "profile.jpg",
       uniqueName: "unique.jpg",
-      path: "http://"
+      path: "/images/히어로 1.png"
     },
     favoriteWorkingDay: {
       favoriteDate: ["MON", "THU"],

@@ -17,12 +17,12 @@ export const reviewDetail = {
       {
         id: 1,
         uniqueName: "A",
-        path: "S3 이미지 주소A"
+        path: "/images/히어로 1.png"
       },
       {
         id: 2,
         uniqueName: "B",
-        path: "S3 이미지 주소B"
+        path: "/images/히어로 1.png"
       }
     ],
     createdAt: "2023-11-16T16:08:24"
@@ -76,6 +76,37 @@ export const sendReview = {
   },
   serverDateTime: "2023-11-16T16:08:24"
 };
+export const emptySendReview = {
+  status: 200,
+  data: {
+    userId: 1,
+    content: [],
+    pageable: {
+      pageNumber: 5,
+      pageSize: 5,
+      sort: {
+        sorted: false,
+        unsorted: true,
+        empty: true
+      },
+      offset: 0,
+      paged: true,
+      unpaged: false
+    },
+    numberOfElements: 2,
+    first: false,
+    last: true,
+    size: 5,
+    number: 0,
+    sort: {
+      sorted: false,
+      unsorted: true,
+      empty: true
+    },
+    empty: false
+  },
+  serverDateTime: "2023-11-16T16:08:24"
+};
 
 export const receiveReview = {
   status: 200,
@@ -115,6 +146,36 @@ export const receiveReview = {
     numberOfElements: 2,
     first: true,
     last: false,
+    size: 5,
+    number: 0,
+    sort: {
+      sorted: false,
+      unsorted: true,
+      empty: true
+    },
+    empty: false
+  },
+  serverDateTime: "2023-11-20T15:41:28"
+};
+export const emptyReceiveReview = {
+  status: 200,
+  data: {
+    content: [],
+    pageable: {
+      pageNumber: 5,
+      pageSize: 5,
+      sort: {
+        sorted: false,
+        unsorted: true,
+        empty: true
+      },
+      offset: 0,
+      paged: true,
+      unpaged: false
+    },
+    numberOfElements: 2,
+    first: false,
+    last: true,
     size: 5,
     number: 0,
     sort: {
